@@ -1,0 +1,69 @@
+import random
+
+numero = random.randint(1, 100)
+print('Welcome to the game ! You have to guess the computer number to 1 a 100.')
+print('Easy (10 chances) and a tip--->1')
+print('Medium (7 chances)and a tip--->2')
+print('Hard (5 chances)--->3')
+n1=int(input('Choose the difficult.'))
+while n1<0 or n1>3:
+    n=int(input('Choose the difficult'))
+if n1==1:
+    contador=10
+    print('So nice, the easy difficult !.')
+    print('If you wanna the tip--->1')
+    n2=int(input('If you dont wanna---->2'))
+    if n2==1:
+        if numero%2==0:
+            print('Its a even number')
+        else:
+            print('Its a odd number')
+    while contador !=0:
+        n3=int(input('Try to guess the number.'))
+        if n3==numero:
+            break
+        else:
+            print('Dawmm, you are wrong ! Try again !')
+            contador=contador-1
+    if contador==0:
+        print('You Lose !')
+    else:
+        print('Congratulations !! You Win!')
+if n1==2:
+    contador=7
+    print('So nice, the medium difficult !.')
+    print('If you wanna the tip--->1')
+    n2=int(input('If you dont wanna---->2'))
+    if n2==1:
+        if numero%2==0:
+            print('Its a even number')
+        else:
+            print('Its a odd number')
+    while contador!=0:
+        n3=int(input('Try to guess the number.'))
+        if n3==numero:
+            break
+        else:
+            print('Dawmm, you are wrong ! Try again !')
+            contador=contador-1
+    if contador==0:
+        print('You Lose !')
+    else:
+        print('Congratulations !! You Win!')
+if n1==3:
+    contador=5
+    print('So nice, the hard difficult !.')
+    while contador!=0:
+        n3=int(input('Try to guess the number.'))
+        if n3==numero:
+            break
+        else:
+            print('Dawmm, you are wrong ! Try again !')
+            contador=contador-1
+    if contador==0:
+        print('You Lose !')
+    else:
+        print('Congratulations !! You Win!')
+        
+            
+    
